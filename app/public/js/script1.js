@@ -1,4 +1,9 @@
 //using XMLHttpRequest
+var getUrl = window.location;
+var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+console.log(baseUrl);
+
+
 function addNote(){
   var title = document.getElementById("add-title").value;
   var text = document.getElementById("add-body").value;
@@ -29,7 +34,7 @@ function displayNote(){
       document.getElementById("body1").innerHTML =  data.text;
     }
   };
-  xhttp.open("GET", "http://localhost:8000/notes/"+id, true);
+  xhttp.open("GET", baseUrl+"notes/"+id, true);
   xhttp.send();
 }
 
@@ -55,7 +60,7 @@ function saveEdit(){
       document.getElementById('spoiler').style.display = 'none';
     }
   };
-  xhttp.open("PUT", "http://localhost:8000/notes/"+id, true);
+  xhttp.open("PUT", baseUrl+"notes"+id, true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(params);
 }
@@ -71,7 +76,7 @@ function deleteNote(){
       document.getElementById("body1").innerHTML =  "";
     }
   };
-  xhttp.open("DELETE", "http://localhost:8000/notes/"+id, true);
+  xhttp.open("DELETE", baseUrl+"notes"+id, true);
   xhttp.send();
   //console.log("deleted");
 }
