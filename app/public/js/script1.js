@@ -18,7 +18,7 @@ function addNote(){
       document.getElementById("add-body").value = "";
     }
   };
-  xhttp.open("POST", "http://localhost:8000/notes", true);
+  xhttp.open("POST", baseUrl+"notes/", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(params);
 }

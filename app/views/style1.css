@@ -1,0 +1,59 @@
+
+
+.thick-green-border {
+    border-color: black;
+    border-width: 10px;
+
+  }
+
+  .smaller-image{
+    width: 400px;
+    align: center;
+  }
+  .silver-background{
+    background-color: silver;
+  }
+
+  .red-text {
+    color: black;
+    font-family:Lobster;
+
+  }
+  body {
+   font-family: 'Tangerine', serif;
+   font-size: 36px;
+ }
+ .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+
+  }
+
+  .yellow-box {
+    background-color: #7fb3d5  ;
+    padding: 10px;
+    width:50%;
+    font-size: 20px;
+    text-align: justify;
+
+
+  }
+
+  .red-box {
+    background-color:  #0fedb7 ;
+    padding: 20px;
+    margin: -15px;
+    font-size: 50px;
+  }
+
+  .green-box {
+    background-color: green;
+    padding: 20px;
+    margin: -15px;
+  }
